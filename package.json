@@ -1,9 +1,4 @@
 {
   "name": "devpilot-ai",
-  "private": true,
-  "packageManager": "npm",
-  "workspaces": [
-    "server",
-    "web"
-  ]
+  "private": true
 }
