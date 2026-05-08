@@ -23,7 +23,7 @@ const STATE_FILE = path.join(process.cwd(), 'state.json');
 function loadSettings() {
   const defaults = {
     llmProvider: process.env.DEFAULT_LLM_PROVIDER || 'groq',
-    llmModel: process.env.DEFAULT_LLM_MODEL || 'llama-3.1-8b-instant',
+        llmModel: 'llama-3.1-70b-versatile',
     openrouterKey: process.env.OPENROUTER_API_KEY || '',
     geminiKey: process.env.GEMINI_API_KEY || '',
     groqKey: process.env.GROQ_API_KEY || '',
