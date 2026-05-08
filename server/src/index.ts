@@ -76,13 +76,13 @@ async function initChroma(): Promise<ChromaDBService> {
 }
 
 const app = express();
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: true }));
 app.use(express.json());
 
 const httpServer = http.createServer(app);
 
 const io = new SocketServer(httpServer, {
-  cors: { origin: 'http://localhost:3000' },
+  cors: { origin: true },
   path: '/ws',
 });
 
