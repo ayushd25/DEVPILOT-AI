@@ -140,7 +140,7 @@ export class ManagerAgent extends EventEmitter {
 
         for (let attempt = 0; attempt <= MAX_DEBUG_RETRIES; attempt++) {
           if (attempt > 0) {
-             await new Promise(resolve => setTimeout(resolve, 20000));
+                         await new Promise(resolve => setTimeout(resolve, 35000));
             this.metrics.debugLoops++;
             this.emitEvent('debug_loop', {
               attempt,
