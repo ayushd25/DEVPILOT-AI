@@ -5,16 +5,5 @@
   "workspaces": [
     "server",
     "web"
-  ],
-  "scripts": {
-    "dev": "turbo run dev",
-    "build": "turbo run build",
-    "start": "turbo run start",
-    "docker:up": "docker-compose up -d redis chroma",
-    "docker:down": "docker-compose down"
-  },
-  "devDependencies": {
-    "turbo": "^2.1.0",
-    "typescript": "^5.5.0"
-  }
+  ]
 }
