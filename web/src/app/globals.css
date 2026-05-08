@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { @apply border-[#1e1b4b]/30; }
+  body { font-feature-settings: "rlig" 1, "calt" 1; }
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #1e1b4b; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #312e81; }
+
+.agent-planner { --agent-color: 168 85 247; }
+.agent-retriever { --agent-color: 6 182 212; }
+.agent-coder { --agent-color: 99 102 241; }
+.agent-tester { --agent-color: 245 158 11; }
+.agent-reviewer { --agent-color: 236 72 153; }
+
+.agent-badge {
+  background: hsl(var(--agent-color) / 0.15);
+  color: hsl(var(--agent-color));
+  border: 1px solid hsl(var(--agent-color) / 0.2);
+}
+
+.log-info { color: #94a3b8; }
+.log-success { color: #34d399; }
+.log-error { color: #f87171; }
+.log-warning { color: #fbbf24; }
+.log-debug { color: #64748b; font-style: italic; }
+
+.terminal-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+@keyframes slide-up {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.animate-slide-up { animation: slide-up 0.3s ease-out; }
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in { animation: fade-in 0.2s ease-out; }
