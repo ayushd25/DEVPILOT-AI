@@ -5,6 +5,9 @@ const nextConfig = {
     NEXT_PUBLIC_SERVER_URL: process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:4000',
     NEXT_PUBLIC_WS_URL: process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:4000',
   },
+  turbopack: {
+    rootDirectory: process.env.NEXT_PUBLIC_SERVER_URL ? undefined : undefined,
+  },
 };
 
 module.exports = nextConfig;
